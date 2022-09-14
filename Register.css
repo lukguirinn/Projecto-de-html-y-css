@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&family=Edu+QLD+Beginner:wght@600&family=Edu+TAS+Beginner:wght@500;600&family=Ibarra+Real+Nova&family=Lobster+Two&family=Shadows+Into+Light&display=swap");
+
+:root {
+  --color: #ffffff;
+  --box: rgba(240, 240, 245, 0.488);
+  --fontfull: "Ibarra Real Nova";
+  --font-titlelogin: "Cormorant SC";
+  --heroletter: "Square Peg", cursive;
+  --cardletter: "Edu VIC WA NT Beginner", cursive;
+  --colornav: #302f4e;
+  
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fontfull);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #313131;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color);
+}
+
+body {
+  background-color: #000000;
+}
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form {
+  width: 400px;
+  margin: 0px;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  background: var(--box);
+  box-shadow: 0 15px 25px rgba(255, 255, 255, 0.101);
+  border-radius: 10px;
+}
+
+.form h1 {
+  text-align: center;
+  color: #202020;
+  font-size: 40px;
+  font-family: var(--font-titlelogin);
+}
+
+.form .user,
+.form .email,
+.form .password,
+.form .checkpass {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.user::before {
+  content: "\f007";
+}
+
+.email::before {
+  content: "\f2b6";
+}
+
+.password::before,
+.checkpass::before {
+  content: "\f023";
+}
+
+.form .user::before,
+.form .email::before,
+.form .password::before,
+.form .checkpass::before {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  font-size: 13px;
+  left: 35px;
+  top: 11px;
+  z-index: 1;
+  color: #000000;
+}
+
+.form div input {
+  width: 85%;
+  padding: 10px 10px 10px 30px;
+  position: relative;
+  font-weight: bold;
+  caret-color: rgb(95, 5, 95);
+  outline: none;
+  border: none;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(252, 254, 255);
+  transition: 0.3s ease-in-out;
+}
+
+.form div input:focus {
+  border-bottom: 2px solid var(--color);
+}
+
+.form button {
+  width: 85%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.35s ease-in-out;
+  background-color: var(--colornav);
+  color: white;
+  border-radius: 5%;
+  -webkit-border-radius: 5%; /*Safari y Chrome*/
+  -moz-border-radius: 5%; /*Firefox*/
+  -o-border-radius: 5%; /*Opera*/
+  -ms-border-radius: 5%; /*IE 8*/
+  padding: 10px;
+}
+
+.form button::before,
+.form button::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+}
+
+.form button:before {
+  top: -5px;
+  left: 0;
+  background-color: inherit;
+  transition: 0.35s ease-in-out;
+}
+
+.form button:after {
+  bottom: -5px;
+  right: 0;
+  background-color: inherit;
+  transition: 0.35s ease-in-out;
+}
+
+.form button:hover {
+  width: 90%;
+  background-color: gold;
+}
+
+.form button:hover::before,
+.main button:hover::after {
+  width: 100%;
+}
+
+.form h5 a {
+font-size: 17px;
+  color: var(--colornav);
+  text-decoration: none;
+}
+
+.form h5,
+h4 {
+    font-size: 17px;
+  color: #d8e7ff;
+}
+
+.form hr {
+  border-top: 2px dotted #ccc;
+  width: 80%;
+  margin-top: -10px;
+}
+
+.form .icons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 35px;
+}
+
+.form .icons .icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%; /*Safari y Chrome*/
+  -moz-border-radius: 50%; /*Firefox*/
+  -o-border-radius: 50%; /*Opera*/
+  -ms-border-radius: 50%; /*IE 8*/
+  transition: 0.25s ease-in-out;
+}
+
+.form .icons .icon-container:first-child:hover {
+  background-color: #3b5998;
+}
+.form .icons .icon-container:nth-child(2):hover {
+  background-color: #5da9dd;
+}
+.form .icons .icon-container:last-child:hover {
+  background-color: #1b1f23;
+}
+
+.form .icons .icon-container .fab {
+  font-size: 20px;
+  transition: 0.25s ease-in-out;
+}
+.form .icons .icon-container .fa-facebook-f {
+  color: #3b5998;
+}
+.form .icons .icon-container .fa-twitter {
+  color: #5da9dd;
+}
+.form .icons .icon-container .fa-github {
+  color: #1b1f23;
+}
+.form .icons .icon-container:hover .fab {
+  color: #fff;
+  transform: scale(1.2);
+}
